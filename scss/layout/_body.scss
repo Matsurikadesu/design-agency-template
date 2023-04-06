@@ -1,0 +1,11 @@
+.body-wrap{
+    width: min(1920px, 100vw);
+    background-color: white;
+}
+@import "body/collage";
+@import "body/projects";
+@import "../components/quad-images";
+@import "../components/particles";
+@import "body/about";
+@import "body/hero";
+@import "body/header";

@@ -1,0 +1,39 @@
+.projects{
+    padding: 70px 0;
+    background-color: #e0e0e0b0;
+    
+    &__item{
+        height: 300px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        position: relative;
+        z-index: 0;
+        text-decoration: none;
+        color: white;
+
+        &-text{
+            position: relative;
+            z-index: 1;
+        }
+
+        &-header{
+            text-transform: uppercase;
+        }
+    }
+
+    .buttons{
+        text-align: center;
+    }
+
+    .btn-icon{
+        padding: 10px 40px;
+    }
+
+    &__item-image{
+        position: absolute;
+        filter: brightness(0.5);
+        top: 0;
+        left: 0;
+    }
+}

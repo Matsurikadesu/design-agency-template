@@ -1,0 +1,100 @@
+.btn-icon{
+    position: relative;
+    display: inline-block;
+    border: none;
+    padding: 0 2rem;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #fff;
+    
+    span {
+        display: inline-block;
+        transition: .3s all;
+    }
+
+    &:hover{
+        background: linear-gradient(90deg, #cbd6ec 50%, #70f0ee 90%);
+        box-shadow: 0 0 34px -10px #08a4fe7c;
+
+        span {
+            transform: translate3d(0, -100%, 0);
+            opacity: 0;
+        }
+
+        svg{
+            transform: none;
+
+            .fa-secondary{
+                animation: hand 1s infinite;
+            }
+
+            .fa-primary{
+                animation: hand 1s infinite reverse;
+            }
+        }
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #fff;
+        border-radius: inherit;
+        -webkit-clip-path: polygon( 0% 0%,0% 100%,35% 100%,35% 60%,65% 60%,65% 100%,100% 100%,100% 0% );
+        clip-path: url(../index.html#clipBox);
+        -webkit-transform: translate3d(0,100%,0) translate3d(0,-2px,0);
+        transform: translate3d(0,100%,0) translate3d(0,-2px,0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+    }
+
+    &.btn-gradient{
+        color: #717171;
+        background: #fff;
+        border-radius: 3px;
+        min-width: 225px;
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom right,#fe7531,#b508cd);
+            border-radius: 5px;
+            z-index: 0;
+        }
+    
+        &::before{
+            content: "";
+            -webkit-transform: none;
+            transform: none;
+            border: none;
+            -webkit-clip-path: none;
+            clip-path: none;
+            background: #fff;
+            z-index: 1;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            top: 2px;
+            left: 2px;
+            transition: .4s all;
+        }
+    }
+
+    svg{
+        position: absolute;
+        bottom: 10px;
+        left: 45%;
+        width: 30px;
+        transform: translate3d(0, calc(100% + 10px), 0);
+        transition: .4s all;
+    }
+}

@@ -1,0 +1,23 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.body{
+    background-color: #111;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@import "components/text";
+@import "animations/animations";
+@import "components/button";
+@import "components/gradient";
+@import "layout/popout";
+@import "layout/body";
