@@ -23,6 +23,12 @@ const translateCollageRow = function(row){
 };
 
 bodyWrapElement.addEventListener('scroll', function(){
+    collageImageRowElements.forEach(function(row){
+        translateCollageRow(row);
+    });
+});
+
+bodyWrapElement.addEventListener('scroll', function(){
     const currentPosition = bodyWrapElement.scrollTop;
 
     if(currentPosition > 500){
@@ -61,10 +67,6 @@ bodyWrapElement.addEventListener('scroll', function(){
         }else{
             element.classList.add('fade-right');
         }
-    });
-
-    collageImageRowElements.forEach(function(row){
-        translateCollageRow(row);
     });
 });
 
