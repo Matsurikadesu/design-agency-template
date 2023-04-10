@@ -20,7 +20,11 @@
         margin-top: 50px;
         flex-wrap: wrap;
 
-        input:not(:nth-last-child(2)){
+        input:focus{
+            box-shadow: none;
+        }
+
+        .form-control:not(:nth-last-child(2)){
             background-color: transparent;
             border: none;
             border-radius: 0;

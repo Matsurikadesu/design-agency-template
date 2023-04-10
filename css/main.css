@@ -493,7 +493,10 @@ a:hover {
   margin-top: 50px;
   flex-wrap: wrap;
 }
-.form__content input:not(:nth-last-child(2)) {
+.form__content input:focus {
+  box-shadow: none;
+}
+.form__content .form-control:not(:nth-last-child(2)) {
   background-color: transparent;
   border: none;
   border-radius: 0;
