@@ -1,7 +1,25 @@
 .body-wrap{
-    width: min(1920px, 100vw);
+    position: relative;
+    scroll-behavior: smooth;
+    z-index: 10;
+    transition: .4s transform;
+    height: 100vh;
     background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-weight: 300;
 }
+
+.container{
+    max-width: 1500px;
+}
+
+@import "body/footer";
+@import "body/form";
+@import "body/references";
+@import "body/process";
+@import "body/features";
+@import "body/services";
 @import "body/collage";
 @import "body/projects";
 @import "../components/quad-images";

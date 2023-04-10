@@ -1,8 +1,59 @@
-@keyframes hand {
-    0%{
-        opacity: 0;
+@keyframes duo {
+	0%,
+	50%,
+	100% {
+		opacity: .9;
+	}
+
+	25%,
+	75% {
+		opacity: .2;
+	}
+}
+@keyframes duo-2 {
+	0%,
+	50%,
+	100% {
+		opacity: 0.2;;
+	}
+
+	25%,
+	75% {
+		opacity: .9;
+	}
+}
+
+.buttons{
+
+    .icon-element-first{
+        animation: duo-2 3s ease 0s infinite normal forwards;
     }
-    100%{
-        opacity: 0.9;
+    
+    .icon-element-second{
+        animation: duo 3s ease 0s infinite normal forwards;
     }
+}
+
+*{
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.fade-left{
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+}
+
+.fade-top{
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+}
+
+.fade-bottom{
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+}
+
+.fade-right{
+	opacity: 0;
+	transform: translate3d(100px, 0, 0);
 }

@@ -1,4 +1,9 @@
+a:hover{
+    color: white;
+}
+
 .headers{
+    will-change: transform;
     text-transform: uppercase;
     letter-spacing: .1em;
 }

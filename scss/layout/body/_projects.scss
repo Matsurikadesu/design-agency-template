@@ -1,22 +1,47 @@
 .projects{
-    padding: 70px 0;
-    background-color: #e0e0e0b0;
+    @media screen and (min-width: 990px) {
+        padding: 7.8vw 0;
+    }
+    padding: 14vw 0;
+    background-color: #f6f6f6;
+    position: relative;
     
+    .btn-icon.btn-gradient::before{
+        background: #f6f6f6;
+    }
+
+    &__image{
+        margin-top: 30px;
+        height: min(30vw, 340px);
+
+        @media screen and (max-width: 575px) {
+            height: 340px;
+        }
+    }
+
     &__item{
         height: 300px;
         display: flex;
         align-items: center;
         padding-left: 30px;
         position: relative;
+        overflow: hidden;
         z-index: 0;
         text-decoration: none;
+        transition: all .3s;
         color: white;
+
+        &:hover{
+            transform: scale(1.05);
+            border-radius: 8px;
+            z-index: 2;
+        }
 
         &-text{
             position: relative;
             z-index: 1;
         }
-
+        
         &-header{
             text-transform: uppercase;
         }
@@ -26,11 +51,9 @@
         text-align: center;
     }
 
-    .btn-icon{
-        padding: 10px 40px;
-    }
-
     &__item-image{
+        height: 100%;
+        width: 100%;
         position: absolute;
         filter: brightness(0.5);
         top: 0;

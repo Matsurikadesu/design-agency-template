@@ -1,0 +1,24 @@
+.features{
+    position: relative;
+    padding-top: 150px;
+
+    .swiper{
+        .swiper-slide{
+            text-align: center;
+            font-weight: 300;
+            color: #717171;
+            margin-bottom: 100px;
+    
+            img{
+                height: 200px;
+                object-fit: contain;
+                margin-bottom: 20px;
+            }
+    
+            h4{
+                text-transform: uppercase;
+                font-weight: 300;
+            }
+        }
+    }
+}

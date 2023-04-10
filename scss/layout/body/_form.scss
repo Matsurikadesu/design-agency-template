@@ -1,0 +1,43 @@
+.form{
+    position: relative;
+    background-color: #f6f6f6;
+    color: #717171;
+    
+    @media screen and (min-width: 990px) {
+        padding: 7.8vw 0;
+    }
+
+    padding: 14vw 0;
+
+    .btn-icon.btn-gradient::before{
+        background: #f6f6f6;
+    }
+    
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        row-gap: 50px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+
+        input:not(:nth-last-child(2)){
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            border-bottom: 2px solid aqua;
+            padding: 20px;
+            flex: 0 0 49%;
+        }
+
+        textarea{
+            width: 100%;
+            padding: 20px;
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            border-bottom: 2px solid aqua;
+        }
+    }
+
+
+}

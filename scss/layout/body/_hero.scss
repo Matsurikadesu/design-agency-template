@@ -2,9 +2,13 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 80vh;
+    height: 88vh;
     color: white;
     overflow: hidden;
+
+    .container{
+        max-width: 1100px;
+    }
 
     & div:not(:first-child){
         position: relative;
@@ -12,42 +16,13 @@
     }
 
     &__link{
-        min-width: 225px;
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 18px;
-        letter-spacing: .05em;
-        color: white;
-        padding: 15px 20px;
-
         &:first-child{
             margin-right: 3rem;
-        }
-
-        span{
-            transition: .5s all;
-            transform: translate(0);
         }
 
         &:hover{
             &::before{
                 transform: none;
-            }
-
-            & svg{
-                transform: none;
-            }
-
-            & span{
-                display: inline-block;
-                color: white;
-                opacity: 0;
-                transition: .3s all;
-                transform: translate(0, -30px);
             }
         }
 
@@ -55,42 +30,30 @@
             content: '';
             position: absolute;
             inset: 0;
-            transition: .5s all;
+            transition: .4s all;
+            transition-timing-function: cubic-bezier(.75,0,.125,1);
             border: 2px solid white;
             transform: translate3d(0, 100%, 0) translate3d(0, -2px, 0);
+            will-change: auto;
         }
+    }
+
+    .wave-bottom{
+        height: 100px;
 
         svg{
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            width: 2.6rem;
-            transform: translate3d(-50%, 0, 0);
-            fill: white;
+            width: 100%;
+            height: 100px;
         }
-    }
-}
-
-.wave-bottom{
-    position: absolute !important;
-    z-index: 5;
-    width: 100%;
-    height: 100px;
-    bottom: -1px;
-    left: 0;
     
-    svg{
-        width: 100%;
-        height: 100px;
-    }
-
-    svg path{
-        &:first-child{
-            opacity: .15;
-        }
-
-        &:nth-child(2){
-            opacity: .2;
+        svg path{
+            &:first-child{
+                opacity: .15;
+            }
+    
+            &:nth-child(2){
+                opacity: .2;
+            }
         }
     }
 }
