@@ -13,7 +13,6 @@ const collageImageElement = collageSectionElement.querySelector('.collage__image
 const collageImageRowElements = collageImageElement.querySelectorAll('.collage__image-line');
 const collageBreakpoint = collageSectionElement.offsetTop - collageImageElement.offsetHeight - 200;
 
-document.addEventListener('mousedown', (evt) => evt.preventDefault());
 
 const translateCollageRow = function(row){
     let directionChange = 1;

@@ -28,7 +28,8 @@
             background-color: transparent;
             border: none;
             border-radius: 0;
-            border-bottom: 2px solid aqua;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(to bottom right,black,red) 1;
             padding: 20px;
             flex: 0 0 49%;
         }
@@ -39,7 +40,12 @@
             background-color: transparent;
             border: none;
             border-radius: 0;
-            border-bottom: 2px solid aqua;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(to bottom right,black,red) 1;
+
+            &:focus{
+                outline: none;
+            }
         }
     }
 

@@ -137,6 +137,10 @@ a:hover {
   animation: duo 3s ease 0s infinite normal forwards;
 }
 
+.swiper {
+  --swiper-theme-color: black;
+}
+
 .fade-left {
   opacity: 0;
   transform: translate3d(-100px, 0, 0);
@@ -249,7 +253,7 @@ a:hover {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom right, #70f0ee, #4e69d4);
+  background: linear-gradient(to bottom right, black, red);
   border-radius: 5px;
   z-index: 0;
 }
@@ -276,7 +280,7 @@ a:hover {
 }
 
 .gradient-text {
-  background: linear-gradient(to bottom right, #70f0ee, #4e69d4);
+  background: linear-gradient(to bottom right, black, red);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -356,23 +360,22 @@ a:hover {
   font-weight: 300;
   color: white;
 }
-.popout__link::after {
+.popout__link::before {
   content: "";
   position: absolute;
-  width: 100%;
-  transform: scale(0);
+  width: 0;
   height: 2px;
   left: 0;
   bottom: 0;
-  transform-origin: left;
-  transition: 0.5s transform;
-  background-color: aqua;
+  transition: 0.5s all;
+  background: white;
 }
 .popout__link_active, .popout__link:hover {
-  color: aqua;
+  color: red;
 }
-.popout__link_active::after, .popout__link:hover::after {
-  transform: scale(1);
+.popout__link_active::before, .popout__link:hover::before {
+  width: 100%;
+  background: red;
 }
 
 .socials {
@@ -387,7 +390,7 @@ a:hover {
   fill: #717171;
 }
 .socials__icon:hover {
-  fill: aqua;
+  fill: red;
 }
 
 .popout__contacts {
@@ -405,7 +408,7 @@ a:hover {
 }
 .popout__contacts .contacts__icon {
   width: 20px;
-  fill: aqua;
+  fill: red;
   opacity: 0.6;
   margin-right: 10px;
 }
@@ -420,7 +423,7 @@ a:hover {
   width: 3rem;
   height: 3rem;
   border-radius: 100%;
-  background-color: #10ffff;
+  background-color: red;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -438,7 +441,7 @@ a:hover {
   background-color: white;
 }
 .close-btn-container:hover svg {
-  fill: #10ffff;
+  fill: red;
 }
 .close-btn-container svg {
   transition: 0.4s fill;
@@ -501,7 +504,8 @@ a:hover {
   background-color: transparent;
   border: none;
   border-radius: 0;
-  border-bottom: 2px solid aqua;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to bottom right, black, red) 1;
   padding: 20px;
   flex: 0 0 49%;
 }
@@ -511,7 +515,11 @@ a:hover {
   background-color: transparent;
   border: none;
   border-radius: 0;
-  border-bottom: 2px solid aqua;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to bottom right, black, red) 1;
+}
+.form__content textarea:focus {
+  outline: none;
 }
 
 .references {
@@ -604,7 +612,7 @@ a:hover {
   opacity: 0;
   inset: 0;
   transition: all 0.3s;
-  background: linear-gradient(to bottom right, #70f0ee, #4e69d4);
+  background: linear-gradient(to bottom right, black, red);
 }
 .process__item:hover {
   color: white;
@@ -613,11 +621,10 @@ a:hover {
   opacity: 1;
 }
 .process__image {
-  fill: #57dad7;
   width: auto;
   height: 50px;
 }
-.process__item:hover .process__image {
+.process__item:hover .process__image path {
   fill: white;
 }
 
@@ -664,7 +671,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, #4e69d4, #70f0ee);
+  background: linear-gradient(to right, black, red);
 }
 .services .nav-item {
   width: 19%;
@@ -709,7 +716,7 @@ a:hover {
   left: 0;
   opacity: 0;
   transition: all 0.3s;
-  background: linear-gradient(to bottom right, #70f0ee, #4e69d4);
+  background: linear-gradient(to bottom right, black, red);
 }
 .services .nav-link.active::after,
 .services .nav-link:hover::after {
@@ -743,7 +750,7 @@ a:hover {
   top: 12px;
   height: 2px;
   width: 10px;
-  background-color: rgb(0, 183, 255);
+  background: linear-gradient(to bottom right, black, red);
 }
 
 .collage {
@@ -934,7 +941,7 @@ a:hover {
   width: 100%;
   height: 88vh;
   background-color: #19b6b6;
-  background-image: linear-gradient(45deg, #4e69d4 8%, #70f0ee 50%, #cbd6ec 90%);
+  background-image: linear-gradient(45deg, black, red);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -1000,7 +1007,7 @@ a:hover {
   padding: 10px 24px;
 }
 .header.scrolled {
-  background-color: rgba(0, 0, 0, 0.2823529412);
+  background-color: rgba(0, 0, 0, 0.4392156863);
 }
 .header__logo {
   font-size: 20px;
