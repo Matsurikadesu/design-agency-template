@@ -20,13 +20,15 @@ section {
 
 html {
   max-width: 1920px;
-  scroll-behavior: smooth;
+  margin: 0 auto;
+  will-change: transform;
 }
 
 .body {
   position: relative;
   background-color: #111;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 .body.menu-open {
   overflow-y: hidden;
@@ -41,7 +43,7 @@ html {
   top: -1px;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
   height: 80px;
   pointer-events: none;
   -webkit-transform: rotate(180deg);
@@ -57,7 +59,7 @@ html {
   bottom: -1px;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
   height: 50px;
   pointer-events: none;
 }
@@ -73,7 +75,7 @@ html {
   bottom: -1px;
   left: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 1;
   height: auto;
   pointer-events: none;
 }
@@ -108,6 +110,10 @@ a:hover {
   font-size: 22px;
 }
 
+.swiper {
+  user-select: none;
+}
+
 @keyframes duo {
   0%, 50%, 100% {
     opacity: 0.9;
@@ -124,15 +130,11 @@ a:hover {
     opacity: 0.9;
   }
 }
-.buttons .icon-element-first {
+.buttons:hover .icon-element-first {
   animation: duo-2 3s ease 0s infinite normal forwards;
 }
-.buttons .icon-element-second {
+.buttons:hover .icon-element-second {
   animation: duo 3s ease 0s infinite normal forwards;
-}
-
-* {
-  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
 
 .fade-left {
@@ -446,7 +448,6 @@ a:hover {
 
 .body-wrap {
   position: relative;
-  scroll-behavior: smooth;
   z-index: 10;
   transition: 0.4s transform;
   height: 100vh;
@@ -782,6 +783,7 @@ a:hover {
 }
 .collage__image-line {
   display: flex;
+  transition: 1.5s transform ease-out;
   will-change: transform;
 }
 @media screen and (max-width: 1000px) {
@@ -897,8 +899,11 @@ a:hover {
 .quad-image {
   width: 50%;
   position: relative;
-  overflow: hidden;
   border-radius: 0;
+  background-color: transparent;
+}
+.quad-image * {
+  box-shadow: 0 40px 100px 0 rgba(0, 0, 0, 0.15), 0 25px 80px rgba(0, 0, 0, 0.1);
 }
 .quad-image:nth-child(2) {
   z-index: 4;
@@ -983,10 +988,11 @@ a:hover {
 .header {
   position: fixed;
   display: flex;
-  z-index: 5;
+  z-index: 100;
   top: 0;
   left: 0;
-  width: 100%;
+  margin: 0 auto;
+  width: min(100%, 1920px);
   justify-content: space-between;
   align-items: center;
   background-color: transparent;

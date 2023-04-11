@@ -35,6 +35,7 @@
         
         &-line{
             display: flex;
+            transition: 1.5s transform ease-out;
             will-change: transform;
 
             @media screen and (max-width: 1000px) {

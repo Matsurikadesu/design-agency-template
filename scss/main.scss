@@ -21,7 +21,7 @@ section{
 html{
     max-width: 1920px;
     margin: 0 auto;
-    scroll-behavior: smooth;
+    will-change: transform;
 }
 
 .body{
@@ -39,9 +39,6 @@ html{
     &-bullet{
         transition: all .3s;
     }
-}
-text{
-
 }
 
 @import "components/wave";

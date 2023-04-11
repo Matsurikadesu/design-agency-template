@@ -23,8 +23,7 @@
 	}
 }
 
-.buttons{
-
+.buttons:hover{
     .icon-element-first{
         animation: duo-2 3s ease 0s infinite normal forwards;
     }
@@ -32,10 +31,6 @@
     .icon-element-second{
         animation: duo 3s ease 0s infinite normal forwards;
     }
-}
-
-*{
-    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
 
 .fade-left{

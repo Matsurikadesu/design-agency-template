@@ -8,7 +8,12 @@ const fadeLeftElements = bodyWrapElement.querySelectorAll('.fade-left');
 const fadeTopElements = bodyWrapElement.querySelectorAll('.fade-top');
 const fadeBottomElements = bodyWrapElement.querySelectorAll('.fade-bottom');
 const fadeRightElements = bodyWrapElement.querySelectorAll('.fade-right');
-const collageImageRowElements = bodyWrapElement.querySelectorAll('.collage__image-line');
+const collageSectionElement = bodyWrapElement.querySelector('.collage');
+const collageImageElement = collageSectionElement.querySelector('.collage__image-wrapper')
+const collageImageRowElements = collageImageElement.querySelectorAll('.collage__image-line');
+const collageBreakpoint = collageSectionElement.offsetTop - collageImageElement.offsetHeight - 200;
+
+document.addEventListener('mousedown', (evt) => evt.preventDefault());
 
 const translateCollageRow = function(row){
     let directionChange = 1;
@@ -23,6 +28,8 @@ const translateCollageRow = function(row){
 };
 
 bodyWrapElement.addEventListener('scroll', function(){
+    if (bodyWrapElement.scrollTop <= collageBreakpoint || bodyWrapElement.scrollTop > (collageSectionElement.offsetTop + collageImageElement.offsetHeight)) return;
+
     collageImageRowElements.forEach(function(row){
         translateCollageRow(row);
     });
