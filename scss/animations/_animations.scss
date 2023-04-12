@@ -36,22 +36,24 @@
 .swiper{
 	--swiper-theme-color: black;
 }
-.fade-left{
-    opacity: 0;
-    transform: translate3d(-100px, 0, 0);
-}
 
-.fade-top{
-    opacity: 0;
-    transform: translate3d(0, -60px, 0);
-}
-
-.fade-bottom{
-    opacity: 0;
-    transform: translate3d(0, 60px, 0);
-}
-
-.fade-right{
+[data-fade]{
+	transition: transform 1s, opacity 1s;
 	opacity: 0;
-	transform: translate3d(100px, 0, 0);
+}
+
+[data-fade='right']{
+	transform: translate(-100px, 0);
+}
+
+[data-fade='left']{
+	transform: translate(100px, 0);
+}
+
+[data-fade='top']{
+	transform: translate(0, -50px);
+}
+
+[data-fade='bottom']{
+	transform: translate(0, 50px);
 }

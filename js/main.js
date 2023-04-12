@@ -1,17 +1,50 @@
-
 const popupBtnElement = document.querySelector('.header__menu-toggle');
 const bodyElement = document.querySelector('.body');
 const bodyWrapElement = bodyElement.querySelector('.body-wrap');
 const closePopupBtnElement = document.querySelector('.close-btn-container');
 const header = document.querySelector('.header');
-const fadeLeftElements = bodyWrapElement.querySelectorAll('.fade-left');
-const fadeTopElements = bodyWrapElement.querySelectorAll('.fade-top');
-const fadeBottomElements = bodyWrapElement.querySelectorAll('.fade-bottom');
-const fadeRightElements = bodyWrapElement.querySelectorAll('.fade-right');
 const collageSectionElement = bodyWrapElement.querySelector('.collage');
 const collageImageElement = collageSectionElement.querySelector('.collage__image-wrapper')
 const collageImageRowElements = collageImageElement.querySelectorAll('.collage__image-line');
 const collageBreakpoint = collageSectionElement.offsetTop - collageImageElement.offsetHeight - 200;
+const fadeElements = bodyWrapElement.querySelectorAll("[data-fade]");
+
+var Visible = function (target) {
+  // Все позиции элемента
+    var targetPosition = {
+        top: window.pageYOffset + target.getBoundingClientRect().top,
+        left: window.pageXOffset + target.getBoundingClientRect().left,
+        right: window.pageXOffset + target.getBoundingClientRect().right,
+        bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+    },
+    // Получаем позиции окна
+    windowPosition = {
+        top: window.pageYOffset,
+        left: window.pageXOffset,
+        right: window.pageXOffset + document.documentElement.clientWidth,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+    };
+
+  if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+    targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+    targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+    targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+    // Если элемент полностью видно, то запускаем следующий код
+    target.style.cssText += 'transform: translate(0, 0); opacity: 1;';
+
+} else {
+    // Если элемент не видно, то запускаем этот код
+    target.style.cssText = '';
+};
+};
+
+// Запускаем функцию при прокрутке страницы
+bodyWrapElement.addEventListener('scroll', function() {
+    fadeElements.forEach(function(element){
+        Visible(element);
+    });
+});
+
 
 
 const translateCollageRow = function(row){
@@ -42,38 +75,6 @@ bodyWrapElement.addEventListener('scroll', function(){
     }else{
         header.classList.remove('scrolled');
     };
-
-    fadeLeftElements.forEach(element => {
-        if(element.closest('section').offsetTop  <= (currentPosition + element.closest('section').offsetHeight / 1.4 - element.offsetHeight + bodyWrapElement.offsetHeight / 2)){
-            element.classList.remove('fade-left');
-        }else{
-            element.classList.add('fade-left');
-        }
-    });
-
-    fadeTopElements.forEach(element => {
-        if(element.closest('section').offsetTop <= (currentPosition + element.closest('section').offsetHeight / 1.4 - element.offsetHeight + bodyWrapElement.offsetHeight / 2)){
-            element.classList.remove('fade-top');
-        }else{
-            element.classList.add('fade-top');
-        }
-    });
-    
-    fadeBottomElements.forEach(element => {
-        if(element.closest('section').offsetTop <= (currentPosition + element.closest('section').offsetHeight / 1.4 - element.offsetHeight + bodyWrapElement.offsetHeight / 2)){
-            element.classList.remove('fade-bottom');
-        }else{
-            element.classList.add('fade-bottom');
-        }
-    });
-
-    fadeRightElements.forEach(element => {
-        if(element.closest('section').offsetTop <= (currentPosition + element.closest('section').offsetHeight / 1.4 - element.offsetHeight + bodyWrapElement.offsetHeight / 2)){
-            element.classList.remove('fade-right');
-        }else{
-            element.classList.add('fade-right');
-        }
-    });
 });
 
 const popupBtnClickHandler = function(){

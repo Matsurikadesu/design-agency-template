@@ -141,24 +141,25 @@ a:hover {
   --swiper-theme-color: black;
 }
 
-.fade-left {
+[data-fade] {
+  transition: transform 1s, opacity 1s;
   opacity: 0;
-  transform: translate3d(-100px, 0, 0);
 }
 
-.fade-top {
-  opacity: 0;
-  transform: translate3d(0, -60px, 0);
+[data-fade=right] {
+  transform: translate(-100px, 0);
 }
 
-.fade-bottom {
-  opacity: 0;
-  transform: translate3d(0, 60px, 0);
+[data-fade=left] {
+  transform: translate(100px, 0);
 }
 
-.fade-right {
-  opacity: 0;
-  transform: translate3d(100px, 0, 0);
+[data-fade=top] {
+  transform: translate(0, -50px);
+}
+
+[data-fade=bottom] {
+  transform: translate(0, 50px);
 }
 
 .btn-icon {
@@ -304,6 +305,7 @@ a:hover {
 .menu-open .body-wrap {
   transform: scale(0.75) translate3d(-32vw, 0, 0);
   overflow-x: hidden;
+  background-color: #111;
 }
 @media screen and (max-width: 990px) {
   .menu-open .body-wrap {
@@ -524,7 +526,7 @@ a:hover {
 
 .references {
   position: relative;
-  padding: 7.8vw 0;
+  padding: 4vw 0;
 }
 .references .swiper {
   margin-top: 50px;
@@ -758,12 +760,12 @@ a:hover {
 }
 .collage__image-container {
   height: 100%;
-  width: 100%;
   box-shadow: 2px 0 4px -2px rgba(128, 128, 128, 0.226);
+  position: relative;
 }
 .collage__image-wrapper {
   position: relative;
-  height: 52vw;
+  height: 100%;
   overflow: hidden;
   box-shadow: 0 0 40px 5px #f6f6f6;
 }
@@ -784,7 +786,7 @@ a:hover {
 }
 @media screen and (max-width: 1000px) {
   .collage__image {
-    height: 108vh !important;
+    height: 108vh;
     width: 200%;
   }
 }
@@ -820,7 +822,7 @@ a:hover {
 }
 .collage .text {
   font-size: 16px;
-  padding: 14vh 10%;
+  padding: 14vh 10% !important;
 }
 @media screen and (max-width: 1400px) {
   .collage .text {

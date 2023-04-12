@@ -14,7 +14,8 @@
     .body-wrap{
         transform: scale(.75) translate3d(-32vw,0,0);
         overflow-x: hidden;
-        
+        background-color: #111;
+
         @media screen and (max-width: 990px) {
             transform: scale(.75) translate3d(-49.25vw,0,0);
         }
