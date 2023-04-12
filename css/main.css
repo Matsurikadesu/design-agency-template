@@ -290,6 +290,9 @@ a:hover {
   font-weight: 600;
 }
 
+.menu-open #particles-js {
+  height: calc(88vh - 1px);
+}
 .menu-open .popout-container {
   z-index: 20;
 }
@@ -307,7 +310,7 @@ a:hover {
   transform: scale(0.75) translate3d(-32vw, 0, 0);
   z-index: 100;
   overflow-x: hidden;
-  background-color: #111;
+  background-color: transparent;
 }
 @media screen and (max-width: 990px) {
   .menu-open .body-wrap {
@@ -842,7 +845,7 @@ a:hover {
 }
 .collage .wave-bottom {
   height: auto;
-  bottom: -5px;
+  bottom: -6px;
 }
 
 .projects {

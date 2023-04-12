@@ -1,4 +1,8 @@
 .menu-open{
+
+    #particles-js{
+        height: calc(88vh - 1px);
+    }
     .popout-container{
         z-index: 20;
     
@@ -15,7 +19,7 @@
         transform: scale(.75) translate3d(-32vw,0,0);
         z-index: 100;
         overflow-x: hidden;
-        background-color: #111;
+        background-color: transparent;
 
         @media screen and (max-width: 990px) {
             transform: scale(.75) translate3d(-49.25vw,0,0);
