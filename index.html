@@ -107,7 +107,7 @@
                         <path d="M 1000 300 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>
                     </svg>
                 </div>
-                <div class="headers text-center mb-5" data-fade="bottom">
+                <div class="headers text-center mb-5 mt-5 mt-md-0" data-fade="bottom">
                     <h4 class="subtitle">Recent web Design Projects</h4>
                     <h2 class="gradient-text">Beautiful & Interactive Web Design</h2>
                 </div>
@@ -734,10 +734,10 @@
                             </div>
     
                             <form class="form__content" id="form">
-                                <input type="text" name="name" class="form-control" placeholder="What's your name? *" required>
+                                <input type="text" name="name" class="form-control" placeholder="What's your name? *" minlength="3" required>
                                 <input type="text" name="company-name" class="form-control" placeholder="Your company">
                                 <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-                                <input type="tel" name="tel" class="form-control" placeholder="Enter your phone number *" required>
+                                <input type="tel" name="tel" class="form-control" placeholder="Enter your phone number *" pattern="/[0-9]{11}/" required>
                                 <textarea name="message" id="message" rows="5" placeholder="Enter your message here..."></textarea>
                                 <div class="d-flex flex-column gap-3">
                                     <label for="file">Send us your brief (if applicable)</label>
@@ -855,10 +855,12 @@
         </div>
     </div>
 
+
     <script src="js/swiper.js"></script>
     <script src="js/main.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/particles-config.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
 </body>
 </html>

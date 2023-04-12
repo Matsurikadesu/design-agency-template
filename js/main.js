@@ -83,3 +83,5 @@ const popupBtnClickHandler = function(){
 
 popupBtnElement.addEventListener('click', popupBtnClickHandler);
 closePopupBtnElement.addEventListener('click', popupBtnClickHandler);
+
+$('#form').validate();
