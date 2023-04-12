@@ -38,6 +38,7 @@
 }
 
 [data-fade]{
+	will-change: transform, opacity;
 	transition: transform 1s, opacity 1s;
 	opacity: 0;
 }

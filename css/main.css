@@ -142,6 +142,7 @@ a:hover {
 }
 
 [data-fade] {
+  will-change: transform, opacity;
   transition: transform 1s, opacity 1s;
   opacity: 0;
 }
@@ -304,6 +305,7 @@ a:hover {
 }
 .menu-open .body-wrap {
   transform: scale(0.75) translate3d(-32vw, 0, 0);
+  z-index: 100;
   overflow-x: hidden;
   background-color: #111;
 }
@@ -318,6 +320,7 @@ a:hover {
   }
 }
 .menu-open .close-btn-container {
+  z-index: 101;
   -webkit-transform: translate3d(50%, -50%, 0) scale(1);
   transform: translate3d(50%, -50%, 0) scale(1);
   transition: 0.4s background-color, 0.8s -webkit-transform 0.1s;
@@ -339,6 +342,9 @@ a:hover {
 
 .popout-container {
   z-index: -1;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   top: 0;
   right: 0;
   width: 30%;
