@@ -48,8 +48,8 @@ bodyWrapElement.addEventListener('scroll', function() {
 
 
 const translateCollageRow = function(row){
-    let directionChange = 1;
     let directionBase = 0;
+    let directionChange = 1;
 
     if(row.dataset.direction === 'left'){
         directionBase = 10;
