@@ -9,6 +9,13 @@ const collageImageRowElements = collageImageElement.querySelectorAll('.collage__
 const collageBreakpoint = collageSectionElement.offsetTop - collageImageElement.offsetHeight - 200;
 const fadeElements = bodyWrapElement.querySelectorAll("[data-fade]");
 
+const videos = document.querySelectorAll('video');
+setTimeout(() => {
+    videos.forEach(item => {
+        item.play();
+    })
+}, 2000);
+
 var Visible = function (target) {
   // Все позиции элемента
     var targetPosition = {
@@ -50,6 +57,7 @@ tabPanels.forEach(item => {
     const btn = item.querySelector('button');
     const panel = document.querySelector(btn.getAttribute('data-bs-target'));
     const fadingElements = panel.querySelectorAll('[data-fade]');
+
     btn.addEventListener('click', () => {
         setTimeout(() => {
             fadingElements.forEach(item => Visible(item));
