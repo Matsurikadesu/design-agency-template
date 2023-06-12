@@ -511,14 +511,13 @@ a:hover {
 .form__content input:focus {
   box-shadow: none;
 }
-.form__content .form-control:not(:nth-last-child(2)) {
+.form__content .form-control {
   background-color: transparent;
   border: none;
   border-radius: 0;
   border-bottom: 2px solid;
   border-image: linear-gradient(to bottom right, black, red) 1;
   padding: 20px;
-  flex: 0 0 49%;
 }
 .form__content textarea {
   width: 100%;
@@ -531,6 +530,17 @@ a:hover {
 }
 .form__content textarea:focus {
   outline: none;
+}
+
+.form__element {
+  position: relative;
+  flex: 0 0 49%;
+}
+
+label.error {
+  position: absolute;
+  top: calc(100% + 10px);
+  color: red;
 }
 
 .references {
@@ -1010,6 +1020,7 @@ a:hover {
   top: 0;
   left: 0;
   margin: 0 auto;
+  min-width: 375px;
   width: min(100%, 1920px);
   justify-content: space-between;
   align-items: center;

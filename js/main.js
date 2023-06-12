@@ -31,7 +31,6 @@ var Visible = function (target) {
     targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
     // Если элемент полностью видно, то запускаем следующий код
     target.style.cssText += 'transform: translate(0, 0); opacity: 1;';
-
 } else {
     // Если элемент не видно, то запускаем этот код
     target.style.cssText = '';
@@ -45,6 +44,18 @@ bodyWrapElement.addEventListener('scroll', function() {
     });
 });
 
+
+const tabPanels = document.querySelectorAll('.nav-item');
+tabPanels.forEach(item => {
+    const btn = item.querySelector('button');
+    const panel = document.querySelector(btn.getAttribute('data-bs-target'));
+    const fadingElements = panel.querySelectorAll('[data-fade]');
+    btn.addEventListener('click', () => {
+        setTimeout(() => {
+            fadingElements.forEach(item => Visible(item));
+        }, 100)
+    })
+})
 
 
 const translateCollageRow = function(row){

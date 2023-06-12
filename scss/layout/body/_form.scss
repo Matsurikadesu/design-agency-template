@@ -24,14 +24,13 @@
             box-shadow: none;
         }
 
-        .form-control:not(:nth-last-child(2)){
+        .form-control{
             background-color: transparent;
             border: none;
             border-radius: 0;
             border-bottom: 2px solid;
             border-image: linear-gradient(to bottom right,black,red) 1;
             padding: 20px;
-            flex: 0 0 49%;
         }
 
         textarea{
@@ -48,6 +47,15 @@
             }
         }
     }
+}
 
+.form__element{
+    position: relative;
+    flex: 0 0 49%;
+}
 
+label.error{
+    position: absolute;
+    top: calc(100% + 10px);
+    color: red;
 }
