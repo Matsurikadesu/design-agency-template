@@ -693,8 +693,11 @@ stop {
   }
 }
 @media screen and (max-width: 500px) {
+  .services {
+    position: relative;
+  }
   .services .wave-top {
-    translate: 0 1px;
+    translate: 0 -1px;
   }
 }
 .services .btn-icon.btn-gradient::before {
