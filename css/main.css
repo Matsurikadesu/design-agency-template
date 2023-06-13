@@ -692,6 +692,11 @@ stop {
     padding: 7.8vw 0;
   }
 }
+@media screen and (max-width: 500px) {
+  .services .wave-top {
+    translate: 0 1px;
+  }
+}
 .services .btn-icon.btn-gradient::before {
   background: #f6f6f6;
 }

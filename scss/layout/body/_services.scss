@@ -2,6 +2,12 @@
     @media screen and (min-width: 990px) {
         padding: 7.8vw 0;
     }
+
+    @media screen and (max-width: 500px) {
+        .wave-top{
+            translate: 0 1px;
+        }
+    }
     
     padding: 14vw 0;
     background-color: #f6f6f6;
