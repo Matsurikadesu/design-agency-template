@@ -471,6 +471,10 @@ a:hover {
   font-weight: 300;
 }
 
+main {
+  min-width: 375px;
+}
+
 .container {
   max-width: 1500px;
 }
@@ -480,6 +484,12 @@ a:hover {
   align-items: center;
   padding: 30px;
   background-color: #111;
+  min-width: 375px;
+}
+@media screen and (max-width: 1000px) {
+  .footer {
+    text-align: center;
+  }
 }
 .footer__disclaimer {
   background-color: transparent;
@@ -588,6 +598,7 @@ label.error {
 }
 .references__review {
   margin-top: 24px;
+  overflow-y: scroll;
 }
 
 .process {

@@ -156,9 +156,9 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 16px 44px rgba(0,0,0,.3);
-    transition: .4s background-color,.2s -webkit-transform;
-    transition: .4s background-color,.2s transform;
-    transition: .4s background-color,.2s transform,.2s -webkit-transform;
+    transition: .4s background-color, .2s -webkit-transform;
+    transition: .4s background-color, .2s transform;
+    transition: .4s background-color, .2s transform, .2s -webkit-transform;
     transition-delay: 0s;
     z-index: 20;
     pointer-events: none;

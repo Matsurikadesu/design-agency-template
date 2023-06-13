@@ -3,6 +3,11 @@
     align-items: center;
     padding: 30px;
     background-color: #111;
+    min-width: 375px;
+
+    @media screen and (max-width: 1000px) {
+        text-align: center;
+    }
 
     &__disclaimer{
         background-color: transparent;
