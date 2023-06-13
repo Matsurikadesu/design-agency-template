@@ -60,7 +60,12 @@
         height: 50px;
     }
 
-    &__item:hover &__image path{
-        fill: white;
+    &__item:hover stop{
+        stop-color: white;
     }
 }
+
+stop{
+    transition: .3s all;
+}
+

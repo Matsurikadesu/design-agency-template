@@ -59,6 +59,12 @@
         width: 100%;
         border: none;
         overflow: hidden;
+        
+        @media screen and (max-width: 799px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         &::after{
             content: '';

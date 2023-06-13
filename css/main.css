@@ -598,7 +598,6 @@ label.error {
 }
 .references__review {
   margin-top: 24px;
-  overflow-y: scroll;
 }
 
 .process {
@@ -656,8 +655,12 @@ label.error {
   width: auto;
   height: 50px;
 }
-.process__item:hover .process__image path {
-  fill: white;
+.process__item:hover stop {
+  stop-color: white;
+}
+
+stop {
+  transition: 0.3s all;
 }
 
 .features {
@@ -737,6 +740,13 @@ label.error {
   width: 100%;
   border: none;
   overflow: hidden;
+}
+@media screen and (max-width: 799px) {
+  .services .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .services .nav-link::after {
   content: "";
