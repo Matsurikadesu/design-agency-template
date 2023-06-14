@@ -21,7 +21,7 @@
     &__image{
         display: flex;
         flex-direction: column;
-        height: calc(34vw * 1.8);
+        height: min(calc(34vw * 1.8), 1000px);
         transform: translate3d(-50%,-50%,0) rotate(22.5deg);
         width: 150%;
         position: absolute;
@@ -48,6 +48,7 @@
     &__image-item{
         width: calc(16.6666% - 12px);
         height: calc( 34vw * 1.8/5 - 12px);
+        max-height: 350px;
         margin: 7.5px;
 
         @media screen and (max-width: 1000px) {

@@ -290,11 +290,9 @@ a:hover {
   font-weight: 600;
 }
 
-.menu-open #particles-js {
-  height: calc(88vh - 1px);
-}
 .menu-open .popout-container {
   z-index: 20;
+  transition-delay: 0s !important;
 }
 @media screen and (max-width: 990px) {
   .menu-open .popout-container {
@@ -351,7 +349,8 @@ a:hover {
   top: 0;
   right: 0;
   width: 30%;
-  color: white;
+  transition-property: width;
+  transition-delay: 0.5s;
 }
 
 .popout__menu {
@@ -460,6 +459,14 @@ a:hover {
   fill: white;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.body-wrap {
+  scrollbar-width: none;
+}
+
 .body-wrap {
   position: relative;
   z-index: 10;
@@ -505,7 +512,8 @@ main {
 }
 @media screen and (min-width: 990px) {
   .form {
-    padding: 7.8vw 0;
+    padding-top: min(7.8vw, 150px);
+    padding-bottom: min(7.8vw, 150px);
   }
 }
 .form .btn-icon.btn-gradient::before {
@@ -555,7 +563,8 @@ label.error {
 
 .references {
   position: relative;
-  padding: 4vw 0;
+  padding-top: min(4vw, 100px);
+  padding-bottom: min(4vw, 100px);
 }
 .references .swiper {
   margin-top: 50px;
@@ -608,7 +617,8 @@ label.error {
 }
 @media screen and (min-width: 990px) {
   .process {
-    padding: 7.8vw 0;
+    padding-top: min(7.8vw, 150px);
+    padding-bottom: min(7.8vw, 150px);
   }
 }
 .process .btn-icon.btn-gradient::before {
@@ -780,6 +790,9 @@ stop {
 .services .nav-link:hover .nav-item__text {
   color: white;
 }
+.services .tab-pane ul {
+  min-height: 320px;
+}
 .services li {
   position: relative;
 }
@@ -825,7 +838,7 @@ stop {
 .collage__image {
   display: flex;
   flex-direction: column;
-  height: 61.2vw;
+  height: min(61.2vw, 1000px);
   transform: translate3d(-50%, -50%, 0) rotate(22.5deg);
   width: 150%;
   position: absolute;
@@ -852,6 +865,7 @@ stop {
 .collage__image-item {
   width: calc(16.6666% - 12px);
   height: calc(12.24vw - 12px);
+  max-height: 350px;
   margin: 7.5px;
 }
 @media screen and (max-width: 1000px) {
@@ -894,7 +908,8 @@ stop {
 }
 @media screen and (min-width: 990px) {
   .projects {
-    padding: 7.8vw 0;
+    padding-top: min(7.8vw, 150px);
+    padding-bottom: min(7.8vw, 150px);
   }
 }
 .projects .btn-icon.btn-gradient::before {
@@ -922,8 +937,7 @@ stop {
   color: white;
 }
 .projects__item:hover {
-  transform: scale(1.05);
-  border-radius: 8px;
+  transform: scale(1.03);
   z-index: 2;
 }
 .projects__item-text {
@@ -986,11 +1000,8 @@ stop {
 
 #particles-js {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 88vh;
-  background-color: #19b6b6;
+  inset: 0;
+  background-color: #b63119;
   background-image: linear-gradient(45deg, black, red);
   background-size: cover;
   background-position: 50% 50%;
@@ -1001,7 +1012,7 @@ stop {
   position: relative;
   display: flex;
   align-items: center;
-  height: 88vh;
+  height: min(88vh, 900px);
   color: white;
   overflow: hidden;
 }

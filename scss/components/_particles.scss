@@ -1,10 +1,7 @@
 #particles-js{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 88vh;
-    background-color: #19b6b6;
+    inset: 0;
+    background-color: #b63119;
     background-image: linear-gradient(45deg, black, red);
     background-size: cover;
     background-position: 50% 50%;

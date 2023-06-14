@@ -1,10 +1,12 @@
 .projects{
-    @media screen and (min-width: 990px) {
-        padding: 7.8vw 0;
-    }
     padding: 14vw 0;
     background-color: #f6f6f6;
     position: relative;
+
+    @media screen and (min-width: 990px) {
+        padding-top: min(7.8vw, 150px);
+        padding-bottom: min(7.8vw, 150px);
+    }
     
     .btn-icon.btn-gradient::before{
         background: #f6f6f6;
@@ -32,8 +34,7 @@
         color: white;
 
         &:hover{
-            transform: scale(1.05);
-            border-radius: 8px;
+            transform: scale(1.03);
             z-index: 2;
         }
 

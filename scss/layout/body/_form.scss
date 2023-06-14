@@ -2,12 +2,12 @@
     position: relative;
     background-color: #f6f6f6;
     color: #717171;
+    padding: 14vw 0;
     
     @media screen and (min-width: 990px) {
-        padding: 7.8vw 0;
+        padding-top: min(7.8vw, 150px);
+        padding-bottom: min(7.8vw, 150px);
     }
-
-    padding: 14vw 0;
 
     .btn-icon.btn-gradient::before{
         background: #f6f6f6;

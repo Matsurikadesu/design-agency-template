@@ -1,11 +1,8 @@
 .menu-open{
-
-    #particles-js{
-        height: calc(88vh - 1px);
-    }
     .popout-container{
         z-index: 20;
-    
+        transition-delay: 0s !important;
+
         @media screen and (max-width: 990px) {
             width: 50vw;
         }
@@ -57,7 +54,8 @@
     top: 0;
     right: 0;
     width: 30%;
-    color: white;
+    transition-property: width;
+    transition-delay: .5s;
 }
 
 .popout__menu{
@@ -177,4 +175,12 @@
         width: 14px;
         fill: white;
     }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.body-wrap{
+    scrollbar-width: none;
 }

@@ -2,7 +2,8 @@
     position: relative;
 
     @media screen and (min-width: 990px) {
-        padding: 7.8vw 0;
+        padding-top: min(7.8vw, 150px);
+        padding-bottom: min(7.8vw, 150px);
     }
 
     padding: 14vw 0;

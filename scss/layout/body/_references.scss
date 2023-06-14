@@ -1,6 +1,7 @@
 .references{
     position: relative;
-    padding: 4vw 0;
+    padding-top: min(4vw, 100px);
+    padding-bottom: min(4vw, 100px);
 
     .swiper{
         margin-top: 50px;

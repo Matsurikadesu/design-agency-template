@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 88vh;
+    height: min(88vh, 900px);
     color: white;
     overflow: hidden;
 
