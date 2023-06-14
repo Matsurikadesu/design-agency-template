@@ -1016,12 +1016,18 @@ stop {
   color: white;
   overflow: hidden;
 }
+.hero .container-sm {
+  pointer-events: none;
+}
 .hero .container {
   max-width: 1100px;
 }
 .hero div:not(:first-child) {
   position: relative;
   z-index: 2;
+}
+.hero__link {
+  pointer-events: all;
 }
 .hero__link:first-child {
   margin-right: 3rem;
