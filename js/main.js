@@ -1,20 +1,11 @@
-const popupBtnElement = document.querySelector('.header__menu-toggle');
 const bodyElement = document.querySelector('.body');
 const bodyWrapElement = bodyElement.querySelector('.body-wrap');
-const closePopupBtnElement = document.querySelector('.close-btn-container');
 const header = document.querySelector('.header');
 const collageSectionElement = bodyWrapElement.querySelector('.collage');
 const collageImageElement = collageSectionElement.querySelector('.collage__image-wrapper')
 const collageImageRowElements = collageImageElement.querySelectorAll('.collage__image-line');
 const collageBreakpoint = collageSectionElement.offsetTop - collageImageElement.offsetHeight - 200;
 const fadeElements = bodyWrapElement.querySelectorAll("[data-fade]");
-
-const videos = document.querySelectorAll('video');
-setTimeout(() => {
-    videos.forEach(item => {
-        item.play();
-    })
-}, 2000);
 
 var Visible = function (target) {
   // Все позиции элемента
@@ -61,10 +52,9 @@ tabPanels.forEach(item => {
     btn.addEventListener('click', () => {
         setTimeout(() => {
             fadingElements.forEach(item => Visible(item));
-        }, 100)
+        }, 40)
     })
 })
-
 
 const translateCollageRow = function(row){
     let directionBase = 0;
@@ -87,20 +77,20 @@ bodyWrapElement.addEventListener('scroll', function(){
 });
 
 bodyWrapElement.addEventListener('scroll', function(){
-    const currentPosition = bodyWrapElement.scrollTop;
 
-    if(currentPosition > 500){
-        header.classList.add('scrolled');
-    }else{
-        header.classList.remove('scrolled');
-    };
+    bodyWrapElement.scrollTop > 500 
+        ? header.classList.add('scrolled')
+        : header.classList.remove('scrolled');
 });
 
 const popupBtnClickHandler = function(){
     bodyElement.classList.toggle('menu-open');
 };
 
+const popupBtnElement = document.querySelector('.header__menu-toggle');
 popupBtnElement.addEventListener('click', popupBtnClickHandler);
+
+const closePopupBtnElement = document.querySelector('.close-btn-container');
 closePopupBtnElement.addEventListener('click', popupBtnClickHandler);
 
 $('#form').validate();

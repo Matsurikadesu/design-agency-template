@@ -20,8 +20,10 @@ section{
 
 html{
     max-width: 1920px;
-    margin: 0 auto;
     will-change: transform;
+    min-width: 375px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .body{

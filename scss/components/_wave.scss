@@ -16,26 +16,6 @@
 }
 
 .wave-bottom{
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    height: 50px;
-    pointer-events: none;
-
-    path{
-        &:first-child{
-            opacity: .3;
-        }
-
-        &:nth-child(2){
-            opacity: .15;
-        }
-    }
-}
-
-.wave-bottom{
     position: absolute !important;
     bottom: -1px;
     left: 0;

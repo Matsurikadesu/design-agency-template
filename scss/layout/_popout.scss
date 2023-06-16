@@ -1,7 +1,7 @@
 .menu-open{
     .popout-container{
         z-index: 20;
-        transition-delay: 0s !important;
+        transition-delay: 0s;
 
         @media screen and (max-width: 990px) {
             width: 50vw;
@@ -14,9 +14,8 @@
 
     .body-wrap{
         transform: scale(.75) translate3d(-32vw,0,0);
+        background-color: inherit;
         z-index: 100;
-        overflow-x: hidden;
-        background-color: transparent;
 
         @media screen and (max-width: 990px) {
             transform: scale(.75) translate3d(-49.25vw,0,0);
@@ -147,7 +146,7 @@
     overflow: hidden;
     width: 3rem;
     height: 3rem;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: red;
     cursor: pointer;
     display: flex;
@@ -175,12 +174,4 @@
         width: 14px;
         fill: white;
     }
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-}
-
-.body-wrap{
-    scrollbar-width: none;
 }

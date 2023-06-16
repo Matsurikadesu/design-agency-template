@@ -4,7 +4,6 @@
     align-items: center;
     height: min(88vh, 900px);
     color: white;
-    overflow: hidden;
 
     .container-sm{
         pointer-events: none;
@@ -33,13 +32,9 @@
         }
 
         &::before{
-            content: '';
-            position: absolute;
             inset: 0;
             transition: .4s all;
-            transition-timing-function: cubic-bezier(.75,0,.125,1);
-            border: 2px solid white;
-            transform: translate3d(0, 100%, 0) translate3d(0, -2px, 0);
+            transition-timing-function: cubic-bezier(.75, 0, .125 ,1);
             will-change: auto;
         }
     }
