@@ -10,23 +10,15 @@
     scrollbar-width: none;
 }
 
-html{
-    min-width: 375px;
-    overflow-y: scroll;
+.body {
+    position: relative;
+    background-color: #111;
     overflow-x: hidden;
-    scrollbar-width: none;
-}
+    margin: 0 auto;
 
-main{
-    min-width: 375px;
-}
-
-::-webkit-scrollbar{
-    width: 0;
-}
-
-.container{
-    max-width: 1500px;
+    &.menu-open {
+        overflow-y: hidden;
+    }
 }
 
 @import "body/footer";

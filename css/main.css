@@ -24,6 +24,7 @@ html {
   min-width: 375px;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .body {
@@ -38,6 +39,18 @@ html {
 
 .swiper-pagination-bullet {
   transition: all 0.3s;
+}
+
+main {
+  min-width: 375px;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.container {
+  max-width: 1500px;
 }
 
 .wave-top {
@@ -461,23 +474,14 @@ a:hover {
   scrollbar-width: none;
 }
 
-html {
-  min-width: 375px;
-  overflow-y: scroll;
+.body {
+  position: relative;
+  background-color: #111;
   overflow-x: hidden;
-  scrollbar-width: none;
+  margin: 0 auto;
 }
-
-main {
-  min-width: 375px;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-}
-
-.container {
-  max-width: 1500px;
+.body.menu-open {
+  overflow-y: hidden;
 }
 
 .footer {
@@ -565,7 +569,7 @@ label.error {
   padding-bottom: 100px;
 }
 .references .card-body {
-  background: #f6f6f6;
+  background-color: #f6f6f6;
   color: #717171;
   padding: 25px;
 }
@@ -763,11 +767,7 @@ stop {
 .services .nav-link::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  top: 0;
-  left: 0;
+  inset: 0;
   opacity: 0;
   transition: all 0.3s;
   background: linear-gradient(to bottom right, black, red);
