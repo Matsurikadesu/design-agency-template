@@ -3,11 +3,11 @@
     z-index: 10;
     transition: .4s transform, .4s background-color;
     height: 100vh;
-    background-color: white;
+    background-color: white !important; 
     overflow-x: hidden;
     overflow-y: scroll;
     font-weight: 300;
-    scrollbar-width: none;
+    // scrollbar-width: none;
 }
 
 .body {

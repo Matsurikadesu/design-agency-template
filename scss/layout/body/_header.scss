@@ -1,5 +1,5 @@
 .header{
-    position: fixed;
+    position: sticky;
     display: flex;
     z-index: 100;
     top: 0;
@@ -12,6 +12,7 @@
     background-color: transparent;
     transition: all 1s;
     padding: 10px 24px;
+    margin-top: -50px;
 
     &.scrolled{
         background-color: #00000070;

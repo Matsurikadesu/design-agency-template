@@ -35,6 +35,10 @@ var Visible = function (target) {
 };
 };
 
+fadeElements.forEach(function(element){
+    Visible(element);
+});
+
 // Запускаем функцию при прокрутке страницы
 bodyWrapElement.addEventListener('scroll', function() {
     fadeElements.forEach(function(element){
@@ -50,9 +54,8 @@ tabPanels.forEach(item => {
     const fadingElements = panel.querySelectorAll('[data-fade]');
 
     btn.addEventListener('click', () => {
-        setTimeout(() => {
-            fadingElements.forEach(item => Visible(item));
-        }, 40)
+        fadingElements.forEach(item => item.style.cssText = '');
+        fadingElements.forEach(item => Visible(item));
     })
 })
 

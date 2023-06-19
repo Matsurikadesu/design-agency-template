@@ -25,16 +25,10 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
-}
-
-.body {
-  position: relative;
-  background-color: #111;
-  overflow-x: hidden;
   margin: 0 auto;
 }
-.body.menu-open {
-  overflow-y: hidden;
+html::-webkit-scrollbar {
+  width: 0;
 }
 
 .swiper-pagination-bullet {
@@ -43,10 +37,6 @@ html {
 
 main {
   min-width: 375px;
-}
-
-::-webkit-scrollbar {
-  width: 0;
 }
 
 .container {
@@ -323,6 +313,11 @@ a:hover {
     transform: scale(0.75) translate3d(-98.25vw, 0, 0);
   }
 }
+@media screen and (min-width: 1921px) {
+  .menu-open .body-wrap {
+    transform: scale(0.75) translate3d(-500px, 0, 0);
+  }
+}
 .menu-open .close-btn-container {
   z-index: 101;
   -webkit-transform: translate3d(50%, -50%, 0) scale(1);
@@ -343,6 +338,11 @@ a:hover {
     right: 87vw;
   }
 }
+@media screen and (min-width: 1921px) {
+  .menu-open .close-btn-container {
+    right: 610px;
+  }
+}
 
 .popout-container {
   z-index: -1;
@@ -354,6 +354,25 @@ a:hover {
   width: 30%;
   transition-property: width;
   transition-delay: 0.5s;
+  scrollbar-width: none;
+}
+@media screen and (min-width: 1921px) {
+  .popout-container {
+    transition-property: width;
+    display: flex;
+    align-items: center;
+    transform: scale(1.5) translate(200px, -100px);
+  }
+}
+.popout-container::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 .popout__menu {
@@ -467,11 +486,10 @@ a:hover {
   z-index: 10;
   transition: 0.4s transform, 0.4s background-color;
   height: 100vh;
-  background-color: white;
+  background-color: white !important;
   overflow-x: hidden;
   overflow-y: scroll;
   font-weight: 300;
-  scrollbar-width: none;
 }
 
 .body {
@@ -784,8 +802,10 @@ stop {
 .services .nav-link:hover .nav-item__text {
   color: white;
 }
-.services .tab-pane ul {
-  min-height: 320px;
+@media screen and (min-width: 768px) {
+  .services .tab-pane ul {
+    min-height: 320px;
+  }
 }
 .services li {
   position: relative;
@@ -1043,7 +1063,7 @@ stop {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   display: flex;
   z-index: 100;
   top: 0;
@@ -1056,6 +1076,7 @@ stop {
   background-color: transparent;
   transition: all 1s;
   padding: 10px 24px;
+  margin-top: -50px;
 }
 .header.scrolled {
   background-color: rgba(0, 0, 0, 0.4392156863);
