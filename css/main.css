@@ -361,6 +361,11 @@ a:hover {
     transition-property: width;
     display: flex;
     align-items: center;
+    transform: translate(100px, -100px);
+  }
+}
+@media screen and (min-width: 2800px) {
+  .popout-container {
     transform: scale(1.5) translate(200px, -100px);
   }
 }
